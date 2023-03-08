@@ -23,16 +23,28 @@ How to clone my project
 change directory into working directory
 'cd face-recognition'
 copy **.env.example** to **.env**
-'''
+```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=***your db***
 DB_USERNAME=***your db username***
 DB_PASSWORD=***your db password***
-'''
+```
+
 - installing dependecies
-'''
+```
 composer install
-npm
-'''
+npm i
+```
+- last setup
+```
+php artisan key:generate
+php artisan storage:link
+php artisan migrate --seed
+```
+> migration and seeder comming ASAP 👍
+- make user account
+'php artisan voyager:admin your@email.com --create'
+- Run the project
+'php artisan serve'  
