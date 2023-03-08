@@ -11,10 +11,10 @@ This project is a simple web-based face recognition built with Laravel and Face+
 ## Setup
 How to clone my project
 - clone my project
-'git clone https://github.com/galanghanafi/face-recognition'
+'$ git clone https://github.com/galanghanafi/face-recognition'
 - setting .env file
 change directory into working directory
-'cd face-recognition'
+'$ cd face-recognition'
 copy **.env.example** to **.env**
 ```
 DB_CONNECTION=mysql
@@ -36,12 +36,12 @@ npm i
 ```
 - last setup
 ```
-php artisan key:generate
-php artisan storage:link
-php artisan migrate --seed
+$ php artisan key:generate
+$ php artisan storage:link
+$ php artisan migrate --seed
 ```
 > migration and seeder comming ASAP 👍
 - make user account
-'php artisan voyager:admin your@email.com --create'
+'$ php artisan voyager:admin your@email.com --create'
 - Run the project
-'php artisan serve'  
+'$ php artisan serve'  
