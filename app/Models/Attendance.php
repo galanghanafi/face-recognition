@@ -9,7 +9,9 @@ use App\Models\Student;
 class Attendance extends Model
 {
     use SoftDeletes;
-
+    protected $fillable =[
+        'student_nim'
+    ];
     public function student()
     {
         return $this->belongsTo(Student::class);
