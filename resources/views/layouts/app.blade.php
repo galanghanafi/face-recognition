@@ -18,24 +18,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- jquery datatable --}}
     <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
-
-    <script language="JavaScript">
-        Webcam.set({
-            width: 490,
-            height: 350,
-            image_format: 'jpeg',
-            jpeg_quality: 90
-        });
-
-        Webcam.attach('#my_camera');
-
-        function take_snapshot() {
-            Webcam.snap(function(data_uri) {
-                $(".image-tag").val(data_uri);
-                document.getElementById('results').innerHTML = '<img src="' + data_uri + '"/>';
-            });
-        }
-    </script>
+    {{-- web-cam.js --}}
+    <script src="{{asset('assets/js/web-cam.js')}}"></script>
 </body>
 
 </html>
