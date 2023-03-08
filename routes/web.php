@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    dd(config('services.faceplus_api'));
 });
 
 Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');

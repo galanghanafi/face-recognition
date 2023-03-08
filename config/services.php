@@ -31,4 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'faceplus_api'=> env('FACEPLUS_API'),
+    'faceplus_api_key'=> env('FACEPLUS_API_KEY'),
+    'faceplus_api_secret'=> env('FACEPLUS_API_SECRET'),
 ];

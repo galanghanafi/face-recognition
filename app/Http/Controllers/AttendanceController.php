@@ -55,9 +55,9 @@ class AttendanceController extends Controller
             $referenceImg = $student->images;
             $referenceImg = storage_path('app\\public\\'.$referenceImg);
             $referenceImg = base64_encode(file_get_contents($referenceImg));
-            $compare = Http::asForm()->post('https://api-us.faceplusplus.com/facepp/v3/compare?', [
-                'api_key' => 'BylU_56kOE6uVhKHLm_SJxrgZao5Ooon',
-                'api_secret' => 'mJTin_kFlMGz-rmlgtKizFzsPFYF-MWN',
+            $compare = Http::asForm()->post(config('services.faceplus_api').'compare?', [
+                'api_key' => config('services.faceplus_api_key'),
+                'api_secret' => config('services.faceplus_api_secret'),
                 'image_base64_1' => $referenceImg,
                 'image_base64_2' => $camImg,
             ]);
